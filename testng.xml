@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <listeners>
+        <listener class-name="com.app.base.Listeners"/>
+        <listener class-name="com.app.base.ExtentReporter"/>
+    </listeners>
+    <test verbose="2" preserve-order="true" name="ScoreAppAutomation">
+        <classes>
+            <class name="com.app.tests.smokesuite.ScoreSmokeTest">
+                <methods>
+                    <include name="InitializeApplication"/>
+                    <include name="ScoreTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
