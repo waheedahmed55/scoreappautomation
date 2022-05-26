@@ -136,7 +136,7 @@ mvn test -DdeviceName={NAME_OF_THE_DEVICE}
 ```
 Please find below reference to the execution of the test case on an emulator
 
-[Test Case Execution](https://share.cleanshot.com/41Rbvr)
+[Test Case Execution](https://drive.google.com/file/d/1R5POjUj5ph8sx0YUD0-Tu3C9x_PksyNb/view?usp=sharing)
 
 ### Details related to the framework
 
