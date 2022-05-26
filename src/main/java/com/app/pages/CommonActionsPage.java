@@ -23,9 +23,11 @@ public class CommonActionsPage {
     @AndroidFindBy(id="com.fivemobile.thescore:id/btn_primary")
     private WebElement SelectionDone;
 
-    @AndroidFindBy(xpath="//android.view.ViewGroup")
+    @AndroidFindBy(id="com.fivemobile.thescore:id/follow_icon")
     private WebElement TeamSelect;
 
+    @AndroidFindBy(id="com.fivemobile.thescore:id/subtitle_onboarding")
+    private WebElement HeaderSelectText;
 
     public void clickOnNavigateBack(){
         NavigateBack.click();
@@ -41,5 +43,9 @@ public class CommonActionsPage {
 
     public void clickOnTeamSelect(){
         TeamSelect.click();
+    }
+
+    public void clickHeaderText(){
+        HeaderSelectText.click();
     }
 }

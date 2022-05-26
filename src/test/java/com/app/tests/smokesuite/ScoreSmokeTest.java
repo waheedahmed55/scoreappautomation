@@ -45,12 +45,14 @@ public class ScoreSmokeTest extends BaseDriver {
     public void InitializeApplication(String selectTeam){
         welcomePage.clickOnGetStarted();
         commonActionsPage.clickOnSelectionDone();
-        permissionsPage.clickOnAllowLocation();
-        permissionsPage.clickOnAllowWhileUsingApp();
+        //permissionsPage.clickOnAllowLocation();
+        permissionsPage.clickOnLocationMaybeLater();
+        //permissionsPage.clickOnAllowWhileUsingApp();
         teamSelectionPage.clickOnTeamSearchBox();
         commonActionsPage.typeInSearchBoxText(selectTeam);
         commonActionsPage.clickOnTeamSelect();
         teamSelectionPage.clickOnTeamSelectContinue();
+        commonActionsPage.clickHeaderText();
         commonActionsPage.clickOnSelectionDone();
     }
 
@@ -64,7 +66,7 @@ public class ScoreSmokeTest extends BaseDriver {
     public void ScoreTest(String searchTeam){
         appHomePage.clickOnSearchTextView();
         commonActionsPage.typeInSearchBoxText(searchTeam);
-        commonActionsPage.clickOnTeamSelect();
+        teamHomePage.clickOnTeamSearchSelect();
         Assert.assertTrue(teamHomePage.isTeamNameDisplayed());
         teamHomePage.clickOnTeamStatsTab();
         Assert.assertTrue(teamHomePage.isTeamStatsHeaderTextDisplayed());

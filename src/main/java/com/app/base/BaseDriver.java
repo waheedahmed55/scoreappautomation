@@ -11,7 +11,6 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.URL;
@@ -62,8 +61,6 @@ public class BaseDriver {
             cap.setCapability(MobileCapabilityType.NEW_COMMAND_TIMEOUT, "60");
             driver = new AndroidDriver<>(new URL("http:127.0.0.1:4723/wd/hub"), cap);
             driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -95,9 +92,7 @@ public class BaseDriver {
         try {
             Runtime.getRuntime().exec(System.getProperty("user.dir") + "/src/main/resources/TriggerEmulator.bat");
             Thread.sleep(30000);
-        } catch (IOException e) {
-            e.printStackTrace();
-        } catch (InterruptedException e) {
+        } catch (IOException | InterruptedException e) {
             e.printStackTrace();
         }
     }

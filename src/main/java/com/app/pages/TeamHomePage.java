@@ -23,6 +23,9 @@ public class TeamHomePage {
     @AndroidFindBy(id = "com.fivemobile.thescore:id/header_text")
     private WebElement TeamStatsHeaderText;
 
+    @AndroidFindBy(id = "com.fivemobile.thescore:id/txt_name")
+    private WebElement TeamSearchSelect;
+
     public void clickOnTeamStatsTab(){
         TeamStatsTab.click();
     }
@@ -33,6 +36,10 @@ public class TeamHomePage {
 
     public boolean isTeamStatsHeaderTextDisplayed(){
         return TeamStatsHeaderText.isDisplayed();
+    }
+
+    public void clickOnTeamSearchSelect(){
+        TeamSearchSelect.click();
     }
 
 }

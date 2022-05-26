@@ -16,6 +16,9 @@ public class PermissionsPage {
     @AndroidFindBy(id="com.fivemobile.thescore:id/btn_allow")
     private WebElement AllowLocation;
 
+    @AndroidFindBy(id="com.fivemobile.thescore:id/btn_disallow")
+    private WebElement LocationMaybeLater;
+
     @AndroidFindBy(id="com.android.permissioncontroller:id/permission_allow_foreground_only_button")
     private WebElement AllowWhileUsingApp;
 
@@ -25,5 +28,9 @@ public class PermissionsPage {
 
     public void clickOnAllowWhileUsingApp(){
         AllowWhileUsingApp.click();
+    }
+
+    public void clickOnLocationMaybeLater(){
+        LocationMaybeLater.click();
     }
 }
