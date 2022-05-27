@@ -53,10 +53,13 @@ public class CommonActionsPage {
     }
 
     public void clickOnClosePopup(){
-        if(ClosePopup.isDisplayed()){
-            ClosePopup.click();
+        try{
+            if(ClosePopup.isDisplayed()){
+                ClosePopup.click();
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
         }
-
-
+        
     }
 }
