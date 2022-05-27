@@ -54,6 +54,7 @@ public class ScoreSmokeTest extends BaseDriver {
         teamSelectionPage.clickOnTeamSelectContinue();
         commonActionsPage.clickHeaderText();
         commonActionsPage.clickOnSelectionDone();
+        commonActionsPage.clickOnClosePopup();
     }
 
     /*

@@ -29,6 +29,9 @@ public class CommonActionsPage {
     @AndroidFindBy(id="com.fivemobile.thescore:id/subtitle_onboarding")
     private WebElement HeaderSelectText;
 
+    @AndroidFindBy(id="com.fivemobile.thescore:id/dismiss_modal")
+    private WebElement ClosePopup;
+
     public void clickOnNavigateBack(){
         NavigateBack.click();
     }
@@ -47,5 +50,13 @@ public class CommonActionsPage {
 
     public void clickHeaderText(){
         HeaderSelectText.click();
+    }
+
+    public void clickOnClosePopup(){
+        if(ClosePopup.isDisplayed()){
+            ClosePopup.click();
+        }
+
+
     }
 }
